@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<!-- saved from url=(0049)https://getbootstrap.com/docs/4.3/examples/album/ -->
+<html lang="en">
+
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <!--------------------------------------------------------------------------------------------------------------------->
+    <title>eMercado - Todo lo que busques está aquí</title>
+    <!--------------------------------------------------------------------------------------------------------------------->
+    <link rel="canonical" href="https://getbootstrap.com/docs/4.3/examples/album/">
+    <link href="https://fonts.googleapis.com/css?family=Raleway:300,300i,400,400i,700,700i,900,900i" rel="stylesheet">
+    <!--------------------------------------------------------------------------------------------------------------------->
+    <!-- Bootstrap core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/styles.css" rel="stylesheet">
+    <link href="css/dropzone.css" rel="stylesheet">
+  <!---------------------------------------------------------------------------------------------------------------------->
+      <!--librería para usar SweetAlert-->
+      <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>   
+  <!---------------------------------------------------------------------------------------------------------------------->
+    <link href="css/carrito.css" rel="stylesheet">
+    <link href="css/font-awesome.min.css" rel="stylesheet">   
+    <!--------------------------------------------------------------------------------------------------------------------->
+    <style>
+      .bd-placeholder-img {
+        font-size: 1.125rem;
+        text-anchor: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+      }
+      @media (min-width: 768px) {
+        .bd-placeholder-img-lg {
+          font-size: 3.5rem;
+        }
+      }
+      input{
+        width: 10cm;
+      }
+    </style>
+  </head>
+
+  <body>
+    <nav class="navbar navbar-expand-md navbar-light doradogradiente">
+      <!-- El logotipo y el icono que despliega el menú se agrupan para mostrarlos mejor en los dispositivos móviles -->
+      <span class="navbar-brand w-25"><a href="principalmenu.html">E-Commerce</a></span>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" 
+              data-target="#navbarSupportedContent" 
+              aria-controls="navbarSupportedContent" 
+              aria-expanded="false" 
+              aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <!-- Agrupar los enlaces de navegación, los formularios y cualquier otro elemento que se pueda ocultar al minimizar la barra -->
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav mr-auto w-100  justify-content-between">
+              <li class="nav-item"><a class="nav-link" href="principalmenu.html">Inicio</a></li>
+              <li class="nav-item"><a class="nav-link" href="categories.html">Categorías</a></li>
+              <li class="nav-item"><a class="nav-link" href="products.html">Productos</a></li>
+              <li class="nav-item"><a class="nav-link" href="sell.html">Vender</a></li>
+              <li class="nav-item dropdown">
+                  <a href="#" class="nav-link dropdown-toggle " data-toggle="dropdown">
+                      <!--Usuario-->
+                      <b id="sesion"></b>
+                  </a>
+                  <ul class="dropdown-menu">
+                      <li class="dropdown-item">
+                          <a href="cart.html">
+                              Mi Carrito <span id="cantSeleccionados" class="badge badge-success">2</span>
+                          </a>
+                      </li>
+                      <li class="dropdown-divider"></li>
+                      <li class="dropdown-item">
+                          <a href="my-profile.html">Mi Perfil</a>
+                      </li>
+                      <li class="dropdown-divider"></li>
+                      <li class="dropdown-item">
+                          <a class="ltrfnd ctrcnt" onclick="cerrarsesion();">Cerrar Sesión</a>
+                      </li>
+                      <!--<button class="dropdown-item logout-btn" onclick="signOut();"> Log Out Google</button>       < !-- cerrar sesion de google NO LOGRA DESCONECTARSE...-->
+                  </ul>
+              </li>
+          </ul>
+          <!-- ESTE BUSCADOR NO FUNCIONA-->
+          <form class="nav-item p-2" role="search">
+              <div class="row">
+                  <input type="text" class="col form-control mr-2" placeholder="Buscar">
+                  <button type="submit" class="col-4 col-md btn btn-warning">Enviar</button>
+              </div>
+          </form>
+      </div>
+    </nav>
+
+    <script>
+        var sesion = localStorage.getItem("usuario"); 
+        document.getElementById("sesion").innerHTML = sesion;
+    </script>
+<br>
+    <div class="container">
+
+        <div class="content-center">
+            <h2> Mi Perfil <i class="fas fa-user-edit"></i></h2> <br>
+        </div>
+
+        <div class="container">
+        <!--COL-SM  /* Dispositivos pequeños (tablets, anchura mayor o igual a 768px) */-->
+        <!--COL-MD  /* Dispositivos medianos (ordenadores, anchura mayor o igual a 992px) */-->      
+        <!--COL-LG  /* Dispositivos grandes (ordenadores, anchura mayor o igual a 1200px) */-->
+        <!--COL-XL   col-xl-2-->
+          <div class="row">
+              <div class="col col-md-6 col-sm-3 col-lg-6"> <!--INFORMACION DE PERFIL-->
+
+                  <label for="nombre"> Nombre</label> 
+                  <input type="text" id="idnombre" name="nombre" placeholder="su/s Nombre/s" class="form-control"> 
+                  <br><br>
+                  <label for="apellidoUno"> Primer Apellido </label> 
+                  <input type="text" id="idapellidoUno" name="apellidoUno" placeholder="su Primer Apellido" class="form-control"> 
+                  <br><br>
+                  <label for="apellidoDos"> Segundo Apellido </label> 
+                  <input type="text" id="idapellidoDos" name="apellidoDos" placeholder="su Segundo Apellido" class="form-control"> 
+                  <br><br>
+
+                  <label for="edad"> Edad</label> 
+                  <input type="number" id="idedad" name="edad" min="1" max="200" class="form-control"> 
+                  <br><br>
+                  <label for="telefono"> Telefono</label> 
+                  <input type="number" id="idtelefono" name="telefono" min="0" class="form-control"> 
+                  <br><br>
+                  <label for="email"> Correo Electrónico</label> 
+                  <input type="email" id="idemail" name="email" placeholder="su Correo Electrónico" class="form-control"> <br>
+                  <br><br>
+
+                  <input type="button" value="Guardar Cambios" class="btn btn-success" onclick="actualizarPerfil(idnombre.value, idapellidoUno.value, idapellidoDos.value, idedad.value, idtelefono.value, idemail.value);">  <br><br><br>
+              </div> <!--COLUMNA INFORMACIONPERFIL-->
+
+              <div class="col col-md-6 col-sm-3 col-lg-5">    <!--IMAGEN DE PERFIL-->
+                  <div class="ctrcnt centrado">
+                    <!--<h1><i class="fas fa-user-circle"></i></h1>-->
+                      <img id="imgperfil" src="./img/perfilimagensilueta.png" weight="300" height="200"><br>
+                      <input type="text" placeholder="URL DE LA IMAGEN" id="mostrarurl">
+                      <span id="contenido"></span>
+                  </div>
+              </div> <!--COLUMNA IMAGENPERFIL-->
+
+          </div> <!--FILA general -->
+        </div> <!--container DATOS FOTOPERFIL-->
+
+    </div> <!--CONTAINER principal-->
+
+  <!--<div class="container p-5">
+    <div class="alert alert-danger" role="alert" style="position: relative; width:auto; top: 0;">
+      <h4 class="alert-heading">¡A trabajar! :)</h4>
+      <p>Esta sección corresponde a: Entrega 7 (Fecha de entrega: 8/11/202020) -> Punto 1 y 2.</p>
+      <hr>
+      <p class="mb-0">Para saber qué debes hacer, fijate en la actividad en CREA correspondiente a esta entrega.</p>
+    </div>
+  </div>-->
+  <footer class="text-muted bg-light">
+    <div class="container">
+      <p>Este sitio forma parte de Desarrollo Web - JAP - 2020</p>
+      <p>Clickea <a target="_blank" href="Letra.pdf">aquí</a> para descargar la letra del obligatorio.</p>
+    </div>
+  </footer>
+  <div class="alert fade alert-success" role="alert" id="alertResult">
+    <span id="resultSpan"></span>
+    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+  <div class="container">
+    <a href="principalmenu.html">volver a menú principal</a>
+    <br> <br>
+  </div>
+  <div id="spinner-wrapper">
+    <div class="lds-ring">
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
+  </div>
+  <script src="js/jquery-3.4.1.min.js"></script>
+  <script src="js/bootstrap.bundle.min.js"></script>
+  <script src="js/dropzone.js"></script>
+  <script src="js/init.js"></script>
+  <script src="js/my-profile.js"></script>
+  <script src="js/loginsocial.js"></script>
+  <script src="js/loginsocialGOOGLE.js"></script>
+  <script src="js/cart.js"></script>
+  <script src="js/convertiriMAGEN.js"></script>
+  <!--<script> document.getElementById("usuaregistrado").innerText = "Usuario: " + localStorage.getItem("usuario"); </script>-->
+  </body>
+
+</html>

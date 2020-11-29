@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+
+<head>
+<!---------------------------------------------------------------------------------------------------------------------->
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<!---------------------------------------------------------------------------------------------------------------------->
+    <link rel="icon" type="image/ico" href="img/casita.ico">    <!--icono en la pestaña-->
+<!---------------------------------------------------------------------------------------------------------------------->
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <title>eMercado - Todo lo que busques está aquí</title>
+<!---------------------------------------------------------------------------------------------------------------------->
+    <link rel="canonical" href="https://getbootstrap.com/docs/4.3/examples/album/">
+    <link href="https://fonts.googleapis.com/css?family=Raleway:300,300i,400,400i,700,700i,900,900i" 
+    rel="stylesheet">
+<!---------------------------------------------------------------------------------------------------------------------->
+    <!-- Bootstrap core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/registroestilos.css" rel="stylesheet">
+<!---------------------------------------------------------------------------------------------------------------------->
+<!--<link rel="stylesheet" href="registroestilos.css">-->
+
+<!---------------------------------------------------------------------------------------------------------------------->
+    <!-- link para acceder a las fuentes online de: fontawesome.com -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" >
+<!---------------------------------------------------------------------------------------------------------------------->
+  <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            margin: 0;
+            background-image:url("img/fondoshopping.jpg");
+            background-size: cover;
+            background-attachment: fixed; /*fondo completo*/
+        }
+    </style>
+<!---------------------------------------------------------------------------------------------------------------------->
+
+</head>
+
+<body>
+    <form class="formulario"> <!--form, clase formulario--> 
+        
+        <h1> Registrate </h1>
+        <div class="contenedor"> <!--div,contiene las entradas y botones, clase contenedor-->
+
+            <div class="input-contenedor"> <!--clase contenedor entrada-->
+                <i class="fas fa-user icon"></i>     <!--ingreso la caja de texto y el icono USUARIO-->
+                <input type="text" placeholder="Nombre de usuario" id="usereg" required>    <!--icono usuario de fontawesome.com y le agregamos mas estilo -->
+            </div>
+
+            <div class="input-contenedor"> <!--clase contenedor entrada-->
+                <i class="far fa-envelope icon"></i>     <!--ingreso la caja de texto y el icono EMAIL -->
+                <input type="email" placeholder="Correo electronico" id="usermail" required>    <!--icono uemail de fontawesome.com  y le agregamos mas estilo -->
+            </div>
+
+            <div class="input-contenedor"> <!--clase contenedor entrada-->
+                <i class="fas fa-unlock-alt icon"></i>     <!--ingreso la caja de texto y el icono CONTRASEÑA-->
+                <input type="password" placeholder="Contraseña" id="userpass" required>    <!--icono contraseña de fontawesome.com  y le agregamos mas estilo -->
+            </div>
+        
+            <input type="submit" value="Registrarte" class="button"  onclick="registraruser(usereg.value, usermail.value, userpass.value);">    <!--boton para ingresar la informacion del registro-->
+            <!--<button onclick="registraruser(usereg.value, usermail.value, userpass.value);">Ingresar</button> -->
+            <br> <br>
+            <p> Al registrarte, aceptas nuestras Condiciones de uso y Política de privacidad. </p>  <!--tipo boton, value=nombre que muestra, clasepraraformato button-->
+            <p>¿Ya tienes una cuenta?  <a class="link" href="index.html">Iniciar Sesión</a></p>   <!--parrafo:TieneCuenta? , clase LINK, redireccion al login INDEX-->
+        </div><!--div class contenedor-->
+    </form>
+</body>
+<!---------------------------------------------------------------------------------------------------------------------->
+<!--librería para usar SweetAlert-->
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>   
+<script src="js/init.js"></script>
+<!--<script src="js/login.js"></script>-->
+<script src="js/registraruser.js"> </script>
+
+</html>
