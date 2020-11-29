@@ -1,0 +1,198 @@
+/*loginsocial.css*/
+body {
+  margin: 0;
+  padding: 0;
+  font-size: 20px;
+  color: rgb(255, 255, 255);
+  font-family: sans-serif;
+  background-image: linear-gradient(rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.3)), url("../img/fondoshopping.jpg");
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+  font-weight: 300;
+  text-align: absolute;
+}
+h1{
+  text-align:center;
+  margin-bottom: 20px;
+  font-size: 28px;
+  color: #fff;
+}
+
+.condicion{
+    color: white;
+    text-shadow: 0 2px 4px rgba(255, 255, 255, 0.972);
+    font-size: 20px;
+}
+
+.login-caja {
+  /*formato para todo el login*/
+  /*
+    margin-top: 150px;    padding: 3px;    width: 100%;    padding: 15px;*/
+  position: relative;
+  margin: 10% auto;
+  height: 450px; /* height:400px;*/
+  width: 600px; /* width: 600px;*/
+  background: rgba(71, 69, 69, 0.815);
+  box-shadow: 0 2px 4px rgba(255, 255, 255, 0.8);
+}
+/*///////////////////////////////////////////////////////////////////////////////////////////////////*/
+/*//////////////////////CAJA IZQUIERDA//////////////////////*/
+.caja-izquierda {
+  position: absolute;
+  top: 0;
+  left: 0;
+  box-sizing: border-box;
+  padding: 20px;
+  width: 300px;
+  height: 450px;
+}
+
+.userpass,.usermail,.usernombre {
+  /*iconos antes de los input*/
+  margin-bottom: 15px;
+  border: 1px solid #aaa;
+}
+.iconos {
+  color: rgb(233, 250, 0);
+  min-width: 50px;
+  text-align: left;
+}
+.caja-entrada {
+  /*  width: 82%;
+    padding: 10px;*/
+  display: block;
+  box-sizing: border-box;
+  margin-bottom: 15px;
+  padding: 4px;
+  width: 220px;
+  height: 32px;
+  border: 1px solid #fff;
+  outline: none;
+  font-size: 15px;
+  transition: 0.2s;
+  color: #fff;
+  background: transparent;
+}
+
+.submit-btn {
+  margin-bottom: 18px;
+  width: 170px; /*ancho*/
+  height: 38px; /*alto*/
+  background: hotpink;
+  border: none;
+  border-radius: 2px;
+  color: #fff;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.submit-btn:hover, .submit-btn:focus { /*pasando mouse por arriva/hago click*/
+  background: yellow;
+  transition: 0.5s;
+  color: black;
+}
+p{ /*texto. ¿no tiene una cuenta?*/
+  text-align:center;
+  margin-bottom: 15px;
+  font-size: 15px;
+  color: #fff;
+}
+
+.link{ /*link: registrate*/
+  text-size-adjust: 20px;
+  align-content: left;
+  color: rgb(137, 235, 10);
+  padding: 42px;/*tabulacion*/
+}
+.link:hover{
+      text-decoration: none; /*quita subrayado*/
+      color: rgba(39, 1, 43, 0.87);
+      font-weight: 500; /*grosor*/
+      font-size: 25px;
+}
+/*///////////////////////////////////////////////////////////////////////////////////////////////////*/
+/*//////////////////////CAJA DERECHA//////////////////////*/
+.caja-derecha {
+  position: absolute;
+  top: 0;
+  right: 0;
+  box-sizing: border-box;
+  padding: 30px; /*espacio tabulado*/
+  width: 300px; /* width: 300px;*/
+  height: 450px; /* height:400px;*/
+
+  background-image: linear-gradient(rgba(90, 90, 90, 0.6), rgba(100, 100, 100, 0.6)), url("../img/VenderCosas.jpg");
+  background-position: center;
+  background-size: cover;
+}
+
+.titulo-derecho {
+  display: block;
+  margin-bottom: 40px;
+  font-size: 28px;
+  color: #fff;
+  text-align: center;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.6);
+}
+/*//////////////////formato para la clase "social"//////////////////*/
+.Social { 
+  /*formato boton Facebook y Google (en general)*/
+  margin-bottom: 20px;
+  width: 255px; /*ancho*/
+  height: 60px; /*alto*/
+  border: none;
+  transition-duration: 3s;       /*DURACION EN MOSTRAR EL EFECTO DE TEXTO*/
+  border-radius: 5px;
+  font-size: 20px;
+  transition: 0.2s;
+  color: rgba(255, 255, 255, 0.966);  /*COLOR DE TEXTO*/
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.938);  /*COLOR Y TIPO DE SOMBRA DE TEXTO*/
+  background: rgb(241, 129, 245);
+  cursor: pointer;
+}
+.btngooglesocial:hover{
+  background: (45deg, #2c1602, #ffc400);
+  transition-duration: 3s;
+  size: 2cm;
+}
+
+/*pasando mouse por arriva/hago click*/
+.Social:hover, .Social:focus {
+  background: -webkit-linear-gradient(45deg, #011e1f, #fc00ff);
+  background: -o-linear-gradient(45deg, #227b7c, #fc00ff);
+  background: -moz-linear-gradient(45deg, #62b6b8, #fc00ff);
+  background: linear-gradient(45deg, #004ede, #fc00ff);
+  transition-duration: 3s;
+  size: 2cm;
+}
+.Facebook {
+  background: #32508e;
+}
+.Google {
+    background: -webkit-linear-gradient( 45deg,     /*COLOR BOTÒN*/
+        rgba(235, 0, 0, 0.98) 6%,
+        rgba(235, 223, 0, 0.83) 52%,
+        rgba(31, 235, 0, 0.76) 75%,
+        rgba(8, 0, 235, 0.71) 100%
+  ); /* Chrome10+,Safari5.1+ */
+}
+.or { /*FORMATO PARA EL "or" DEL MEDIO*/
+  position: absolute;
+  top: 205px;
+  left: 280px;
+  width: 40px;
+  height: 40px;
+  background: #efefef;
+  border-radius: 50%;
+  line-height: 40px;
+  text-align: center;
+  color: darkmagenta;
+  text-shadow: 0 2px 4px  indigo;            /*sombra en el texto*/
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.6);  /*sombra en "la caja""*/
+}
+
+img{
+  border-radius: 50%;
+}
